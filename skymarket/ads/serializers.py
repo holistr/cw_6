@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 
-from ads.models import Ad, Comment
+from .models import Ad, Comment
 
 
 class CommentSerializer(serializers.ModelSerializer):

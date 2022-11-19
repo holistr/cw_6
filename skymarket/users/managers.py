@@ -28,14 +28,14 @@ class UserManager(BaseUserManager):
 
         return user
 
-    def create_superuser(self, email, first_name, last_name, phone, role=UserRoles.ADMIN, password=None):
+    def create_superuser(self, email, first_name, last_name, phone, role=UserRoles.ADMIN, password=None, avatar=None):
         """
         функция для создания суперпользователя — с ее помощью мы создаем админинстратора
         это можно сделать с помощью команды createsuperuser
         """
 
         user = self.create_user(
-            email,
+            email=email,
             first_name=first_name,
             last_name=last_name,
             phone=phone,
